@@ -28,46 +28,6 @@ A comprehensive collection of machine learning implementations and algorithmic t
 - **Styling**: Tailwind CSS
 - **Deployment**: Vercel
 
-## Local Development
-
-1. Install dependencies:
-   ```bash
-   pnpm i
-   # or
-   npm i
-   ```
-
-2. Run the development server:
-   ```bash
-   pnpm dev
-   # or
-   npm run dev
-   ```
-
-3. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-## Add Your PDF
-
-Your resume PDF is already placed at `public/Roshen_J_Resume_Final.pdf`. If you need to update it, simply replace this file with your new resume.
-
-## Deploy to Vercel
-
-1. Push this repository to GitHub
-
-2. Import the repo in Vercel:
-   - Framework preset: **Next.js**
-   - Build command: `next build`
-   - Output directory: `.next`
-
-3. After deployment, verify the `/resume` page renders the embedded PDF. If mobile inline preview fails, use the Download button.
-
-## Customize
-
-- **Update content**: Edit links, about text, and skills in `app/page.tsx`
-- **Add projects**: Add more project cards in `app/projects/page.tsx`
-- **Change styling**: Modify colors and styles in `app/globals.css` and component files
-- **Update metadata**: Edit SEO info in `app/layout.tsx`
-- **Replace OG image**: Update `public/opengraph-image.png` with your custom social preview image
 
 ## Project Structure
 
