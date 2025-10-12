@@ -40,6 +40,30 @@ export default function Projects() {
         </div>
       </section>
 
+      {/* ML Projects */}
+      <section className="mb-12">
+        <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+          <h2 className="text-3xl font-bold mb-4 text-neutral-100">
+            ML Projects
+          </h2>
+          <p className="text-neutral-300 mb-6 leading-relaxed max-w-3xl">
+            A collection of machine learning implementations and algorithmic trading projects.
+            Includes custom learner implementations (Decision Trees, Random Trees, Bag Learners),
+            Q-Learning for trading strategies, and market simulation tools built in Python.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="https://github.com/Roshlion/ML-Projects"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-neutral-800 text-neutral-100 rounded-lg font-medium border border-neutral-700 hover:bg-neutral-700 transition-colors"
+            >
+              View Repository
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Future Projects Placeholder */}
       <section>
         <div className="bg-neutral-900/50 border border-neutral-800 border-dashed rounded-2xl p-8 text-center">
