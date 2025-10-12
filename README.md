@@ -1,8 +1,5 @@
 # Roshen Jegajeevan — Portfolio
 
-My personal portfolio website showcasing my professional experience, projects, and skills as a data-driven analyst and developer. Built with Next.js 14, TypeScript, and Tailwind CSS, this site features an embedded PDF resume viewer, detailed project showcases, and a clean, accessible design.
-
-## About This Website
 
 This is the official portfolio website for Roshen Jegajeevan, currently an Analyst at Capital One with a B.S. in Industrial Engineering and pursuing an M.S. in Computer Science (Machine Learning concentration) at Georgia Tech. The site highlights my work in analytics, machine learning, and full-stack development.
 
