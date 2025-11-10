@@ -37,13 +37,13 @@ function estimateCost(launchTime: Date, instanceType: string): string {
   const now = new Date();
   const hours = (now.getTime() - launchTime.getTime()) / (1000 * 60 * 60);
 
-  // Spot pricing estimates (approximate)
+  // EC2 pricing (on-demand and spot approximate)
   const spotPrices: { [key: string]: number } = {
     'c6i.2xlarge': 0.11,
     'c6i.xlarge': 0.055,
     'c6i.4xlarge': 0.22,
-    't3.medium': 0.012,
-    't3.large': 0.024,
+    't3.medium': 0.0416,
+    't3.large': 0.0832,  // On-demand pricing
   };
 
   const hourlyRate = spotPrices[instanceType] || 0.10;
@@ -144,7 +144,7 @@ export async function GET() {
 function getCurrentTask(status: string): string {
   switch (status) {
     case 'running':
-      return 'Annual optimization: 13 strategies × 5 tickers (Oct 2024 - Oct 2025)';
+      return 'TRADER Full Optimization: 13 strategies × 5 tickers × 1 year (252 trading days) - Run #2';
     case 'stopped':
       return 'No active tasks';
     case 'pending':
@@ -152,7 +152,7 @@ function getCurrentTask(status: string): string {
     case 'stopping':
       return 'Instance shutting down...';
     case 'terminated':
-      return 'Instance terminated';
+      return 'Run #2 completed - Check results in S3';
     default:
       return 'Status unknown';
   }
