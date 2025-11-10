@@ -1,4 +1,5 @@
 import Container from "@/components/Container";
+import EC2StatusCard from "@/components/EC2StatusCard";
 
 export default function Projects() {
   return (
@@ -6,6 +7,19 @@ export default function Projects() {
       <h1 className="text-4xl md:text-5xl font-bold mb-8 text-neutral-100">
         Projects
       </h1>
+
+      {/* Current Work Section */}
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold mb-6 text-neutral-100 flex items-center gap-3">
+          <span className="text-blue-400">⚡</span>
+          Current Work
+        </h2>
+        <EC2StatusCard />
+      </section>
+
+      <h2 className="text-3xl font-bold mb-6 text-neutral-100">
+        Past Projects
+      </h2>
 
       {/* AI Backtester Project */}
       <section className="mb-12">
