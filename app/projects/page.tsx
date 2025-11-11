@@ -123,6 +123,41 @@ export default function Projects() {
               <span>📈</span> Optimization Runs
             </h3>
             <div className="space-y-3">
+              {/* Run #3 - Running */}
+              <div className="bg-neutral-900/50 border border-blue-600/30 rounded p-3">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-bold text-blue-400">Run #3</span>
+                    <span className="px-2 py-0.5 bg-green-500/20 border border-green-500/30 rounded text-xs font-medium text-green-400">
+                      RUNNING
+                    </span>
+                  </div>
+                  <span className="text-xs text-neutral-500">Nov 11, 2025</span>
+                </div>
+                <p className="text-sm text-neutral-300 mb-2">
+                  Full year optimization (Oct 2024 - Oct 2025) • 13 strategies × 5 tickers × 13 months
+                </p>
+                <div className="flex flex-wrap gap-2 text-xs">
+                  <span className="px-2 py-1 bg-neutral-800 rounded text-neutral-400">
+                    t3.large (8-12h)
+                  </span>
+                  <span className="px-2 py-1 bg-neutral-800 rounded text-neutral-400">
+                    Fixed: S3 paths, timezone bugs
+                  </span>
+                  <span className="px-2 py-1 bg-neutral-800 rounded text-neutral-400">
+                    Running in tmux
+                  </span>
+                  <a
+                    href="https://github.com/Roshlion/TRADER/blob/setup/scaffold/EC2_RUN3_DETAILS.md"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 py-1 bg-blue-600/20 border border-blue-600/30 rounded text-blue-400 hover:bg-blue-600/30 transition-colors"
+                  >
+                    View Details →
+                  </a>
+                </div>
+              </div>
+
               {/* Run #2 - Failed */}
               <div className="bg-neutral-900/50 border border-neutral-700/50 rounded p-3 opacity-75">
                 <div className="flex items-center justify-between mb-2">
@@ -139,7 +174,7 @@ export default function Projects() {
                 </p>
                 <div className="flex flex-wrap gap-2 text-xs">
                   <span className="px-2 py-1 bg-neutral-800 rounded text-neutral-500">
-                    Failed after 42min (missing Sept 2025 data)
+                    Failed after 42min (S3 path + timezone bugs)
                   </span>
                   <span className="px-2 py-1 bg-neutral-800 rounded text-neutral-500">
                     Runtime: Only completed Fold 1/4
