@@ -83,27 +83,19 @@ export default function Home() {
           <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl opacity-20 group-hover:opacity-40 blur transition duration-300"></div>
           <div className="relative bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4 text-neutral-100">
-              AI Backtester
+              StratBench
             </h3>
             <p className="text-neutral-300 mb-6 leading-relaxed">
-              Build and backtest trading strategies—manual or AI-assisted—with ML, technicals, and full portfolio simulation.
+              A professional-grade algorithmic trading backtesting platform with AI-powered strategy generation, ML model training, and advanced technical analysis.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://ai-backtester-j1kleim2w-roshlions-projects.vercel.app/backtester"
+                href="https://backtester-final.vercel.app/ticker-hub"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
               >
-                Open Backtester
-              </a>
-              <a
-                href="https://github.com/Roshlion/AI_BACKTESTER"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 bg-neutral-800 text-neutral-100 rounded-lg font-medium border border-neutral-700 hover:border-blue-500/50 hover:bg-neutral-700 transition-all duration-300"
-              >
-                View Repo
+                Open StratBench
               </a>
             </div>
           </div>
