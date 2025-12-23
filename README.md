@@ -8,7 +8,7 @@ This is the official portfolio website for Roshen Jegajeevan, currently an Analy
 ### StratBench
 An interactive backtesting platform that supports both ML-based and technical-indicator strategies. Users can craft trading strategies via AI prompts that compile to a DSL/Python script, then run comprehensive backtests on hosted market datasets.
 
-- **Live Demo**: [StratBench]([https://ai-backtester-j1kleim2w-roshlions-projects.vercel.app/backtester](https://backtester-final.vercel.app/ticker-hub)
+- **Live Demo**:  [StratBench](https://backtester-final.vercel.app/ticker-hub)
 - **Tech**: Next.js, Python, Machine Learning, Financial Analysis
 
 ### ML Projects
