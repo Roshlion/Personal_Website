@@ -1,17 +1,11 @@
 # Roshen Jegajeevan — Portfolio
 
 
-This is the official portfolio website for Roshen Jegajeevan, currently an Analyst at Capital One with a B.S. in Industrial Engineering and pursuing an M.S. in Computer Science (Machine Learning concentration) at Georgia Tech. The site highlights my work in analytics, machine learning, and full-stack development.
+Personal site for Roshen Jegajeevan, Senior Associate in Auto Finance at Capital One, with an M.S. in Computer Science (Machine Learning) in progress at Georgia Tech. The public site is a resume and a short background page.
 
-## Featured Projects
+StratBench is kept in `components/archive/StratBenchSection.tsx` and is not linked from the site.
 
-### StratBench
-An interactive backtesting platform that supports both ML-based and technical-indicator strategies. Users can craft trading strategies via AI prompts that compile to a DSL/Python script, then run comprehensive backtests on hosted market datasets.
-
-- **Live Demo**:  [StratBench](https://backtester-final.vercel.app/ticker-hub)
-- **Tech**: Next.js, Python, Machine Learning, Financial Analysis
-
-### ML Projects
+## ML Projects
 A comprehensive collection of machine learning implementations and algorithmic trading projects built during my Georgia Tech coursework and personal research. Includes custom learner implementations (Decision Trees, Random Trees, Bag Learners), Q-Learning for trading strategies, and market simulation tools.
 
 - **Repository**: [GitHub - ML-Projects](https://github.com/Roshlion/ML-Projects)
@@ -68,7 +62,7 @@ A comprehensive collection of machine learning implementations and algorithmic t
 
 ## Contact
 
-- **Email**: roshenj67@gmail.com
+- **Email**: Roshenj76@gmail.com
 - **Phone**: 678-462-4887
 - **LinkedIn**: [Roshen Jegajeevan](https://www.linkedin.com/in/roshen-jegajeevan-a278a9205/)
 

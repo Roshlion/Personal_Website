@@ -6,22 +6,22 @@ import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const description =
+  "Roshen Jegajeevan is a Senior Associate in Auto Finance at Capital One and an M.S. Computer Science student at Georgia Tech.";
+
 export const metadata: Metadata = {
-  title: "Roshen Jegajeevan — Portfolio",
-  description:
-    "Portfolio of Roshen Jegajeevan — Analyst at Capital One; M.S. CS (Georgia Tech); projects in analytics, ML, and backtesting.",
+  title: "Roshen Jegajeevan",
+  description,
   openGraph: {
-    title: "Roshen Jegajeevan — Portfolio",
-    description:
-      "Portfolio of Roshen Jegajeevan — Analyst at Capital One; M.S. CS (Georgia Tech); projects in analytics, ML, and backtesting.",
+    title: "Roshen Jegajeevan",
+    description,
     images: ["/opengraph-image.png"],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Roshen Jegajeevan — Portfolio",
-    description:
-      "Portfolio of Roshen Jegajeevan — Analyst at Capital One; M.S. CS (Georgia Tech); projects in analytics, ML, and backtesting.",
+    title: "Roshen Jegajeevan",
+    description,
     images: ["/opengraph-image.png"],
   },
 };
@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-neutral-950 text-neutral-100`}>
+      <body className={`${inter.className} bg-neutral-950 text-neutral-100 antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />

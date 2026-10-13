@@ -1,249 +1,263 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import Container from "@/components/Container";
 import Badge from "@/components/Badge";
 
-export default function Home() {
-  const skills = [
-    "SQL",
-    "Python",
-    "Snowflake",
-    "dbt",
-    "AWS/Redshift",
-    "ETL",
-    "Tableau",
-    "QuickSight",
-    "BigQuery",
-    "Looker",
-    "Hightouch",
-    "Pandas",
-    "NumPy",
-    "Scikit-learn",
-    "Machine Learning",
-    "Git/GitHub",
-    "Excel",
-    "YAML",
-    "Matplotlib",
-    "Java",
-    "MATLAB",
-    "Linux",
-    "Vercel",
-    "Node.js",
-    "Next.js",
-    "TypeScript",
-    "React",
-  ];
+const skills = [
+  "SQL",
+  "Python",
+  "Statistical Analysis",
+  "Predictive Modeling",
+  "Credit Risk Modeling",
+  "Tableau",
+  "Snowflake",
+  "dbt",
+  "Java",
+  "MATLAB",
+  "Machine Learning",
+  "Git",
+  "CAD",
+  "ETL",
+  "AWS Certified",
+];
 
+function Card({ children }: { children: ReactNode }) {
   return (
-    <Container className="py-12 md:py-20">
-      {/* Hero Section */}
+    <article className="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6">
+      {children}
+    </article>
+  );
+}
+
+export default function Home() {
+  return (
+    <Container className="py-14 md:py-20">
       <section className="mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
+        <p className="text-sm uppercase tracking-[0.18em] text-neutral-500 mb-4">
+          Auto Finance · Capital One
+        </p>
+        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-50 mb-4">
           Roshen Jegajeevan
         </h1>
-        <p className="text-lg md:text-xl text-neutral-300 mb-6">
-          Senior Analyst at Capital One · Industrial Engineering (B.S.) · M.S.
-          Computer Science (Georgia Tech)
+        <p className="text-lg text-neutral-300 mb-6 max-w-2xl">
+          Senior Associate, Partnerships. M.S. Computer Science at Georgia Tech,
+          focused on machine learning.
         </p>
-        <p className="text-neutral-400 leading-relaxed mb-8 max-w-3xl">
-          I&apos;m a data-driven analyst and builder focused on automating analytics,
-          modeling, and decision tools. I work across SQL, Python, and modern
-          data stacks (Snowflake, dbt) to ship production-grade reporting and
-          ML-assisted workflows. Experienced with time-series modeling,
-          Tableau/QuickSight dashboards, and end-to-end ETL on AWS/Redshift.
-          Pursuing an M.S. in Computer Science (ML concentration) at Georgia
-          Tech; previously B.S. in Industrial Engineering. AWS Certified.
+        <p className="text-neutral-400 leading-relaxed max-w-2xl mb-8">
+          I work on credit policy, decisioning, and the reporting that supports
+          those decisions. That includes policy tests, production models, and
+          automated portfolio views for executive review.
         </p>
-
-        {/* Contact Info */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-8">
-          <a
-            href="mailto:roshenj67@gmail.com"
-            className="flex items-center gap-2 text-neutral-300 hover:text-blue-400 transition-colors group"
-          >
-            <span className="text-neutral-500 group-hover:text-blue-500">email:</span>
-            <span className="font-medium">roshenj67@gmail.com</span>
-          </a>
-          <span className="hidden sm:inline text-neutral-700">|</span>
-          <a
-            href="tel:+16784624887"
-            className="flex items-center gap-2 text-neutral-300 hover:text-blue-400 transition-colors group"
-          >
-            <span className="text-neutral-500 group-hover:text-blue-500">call:</span>
-            <span className="font-medium">678-462-4887</span>
-          </a>
-        </div>
-      </section>
-
-      {/* Featured Project */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6 text-neutral-100">
-          Featured Project
-        </h2>
-        <div className="relative group">
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl opacity-20 group-hover:opacity-40 blur transition duration-300"></div>
-          <div className="relative bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4 text-neutral-100">
-              StratBench
-            </h3>
-            <p className="text-neutral-300 mb-6 leading-relaxed">
-              A professional-grade algorithmic trading backtesting platform with AI-powered strategy generation, ML model training, and advanced technical analysis.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="https://backtester-final.vercel.app/ticker-hub"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
-              >
-                Open StratBench
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Education */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6 text-neutral-100">Education</h2>
-        <div className="space-y-6">
-          <div className="relative group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl opacity-10 group-hover:opacity-20 blur transition duration-300"></div>
-            <div className="relative bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 rounded-2xl p-6">
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
-                <div>
-                  <h3 className="text-xl font-bold text-neutral-100">
-                    Georgia Institute of Technology
-                  </h3>
-                  <p className="text-blue-400 font-medium">Masters in Computer Science (ML concentration)</p>
-                  <p className="text-neutral-400 text-sm mt-1">Cumulative GPA: 3.9/4.0</p>
-                </div>
-                <div className="text-neutral-400 md:text-right mt-2 md:mt-0">
-                  <p className="font-medium">Atlanta, GA</p>
-                  <p className="text-sm">Dec 2025</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl opacity-10 group-hover:opacity-20 blur transition duration-300"></div>
-            <div className="relative bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 rounded-2xl p-6">
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
-                <div>
-                  <h3 className="text-xl font-bold text-neutral-100">
-                    Georgia Institute of Technology
-                  </h3>
-                  <p className="text-blue-400 font-medium">Bachelor in Industrial Engineering</p>
-                  <p className="text-neutral-400 text-sm mt-1">Cumulative GPA: 3.7/4.0</p>
-                </div>
-                <div className="text-neutral-400 md:text-right mt-2 md:mt-0">
-                  <p className="font-medium">Atlanta, GA</p>
-                  <p className="text-sm">May 2023</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Work Experience */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6 text-neutral-100">Work Experience</h2>
-        <div className="space-y-6">
-          {/* Capital One - Senior Associate */}
-          <div className="relative group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl opacity-10 group-hover:opacity-20 blur transition duration-300"></div>
-            <div className="relative bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 rounded-2xl p-6">
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
-                <div>
-                  <h3 className="text-xl font-bold text-neutral-100">Capital One</h3>
-                  <p className="text-blue-400 font-medium">Senior Associate - Dealer Management (Auto Finance)</p>
-                </div>
-                <div className="text-neutral-400 md:text-right mt-2 md:mt-0">
-                  <p className="font-medium">Atlanta, GA</p>
-                  <p className="text-sm">Aug 2024 – Present</p>
-                </div>
-              </div>
-              <ul className="space-y-2 text-neutral-400 text-sm list-disc list-inside">
-                <li>Created/Currently working on a Overall Auto Finance Reporting Suite in Tableau that has views that cover multiple metrics such as Volume, Losses, Quarterly Process metrics, Quality Bar metrics etc. across different segments</li>
-                <li>Executed/Executing end-to-end change management, including testing updates, coordinating with the engineering team to deploy releases, and documenting changes extensively in the Auto Loans policy repository</li>
-                <li>Built automated quarterly reporting workflows by utilizing DBT with snowflake and Python for analysis, metric calculations, and visualization (pandas, SQL, matplotlib, gspread, Google Slides API)</li>
-                <li>Developed insights from data analysis using Python, SQL, and Excel to assess vulnerable segments, front-end and back-end performance, and certified pre-owned vehicle trends</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Capital One - Associate */}
-          <div className="relative group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl opacity-10 group-hover:opacity-20 blur transition duration-300"></div>
-            <div className="relative bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 rounded-2xl p-6">
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
-                <div>
-                  <h3 className="text-xl font-bold text-neutral-100">Capital One</h3>
-                  <p className="text-blue-400 font-medium">Associate - Credit Card Innovation</p>
-                </div>
-                <div className="text-neutral-400 md:text-right mt-2 md:mt-0">
-                  <p className="font-medium">Atlanta, GA</p>
-                  <p className="text-sm">Aug 2023 – Aug 2024</p>
-                </div>
-              </div>
-              <ul className="space-y-2 text-neutral-400 text-sm list-disc list-inside">
-                <li>Contributed to a complex repository (SQL, YAML, python~ pandas, numpy, scikit, matplotlib) that generated analytical reports by implementing changes to a time-series model, the execution flow of the process, and other components</li>
-                <li>Condensed and presented model-driven insights from the reports to stakeholders, influencing credit card policy decisions, and conducted follow up analytics with Python and Excel</li>
-                <li>Initiated the migration of the codebase to a more efficient platform by reformatting code/files and coordinating with technical and non-technical stakeholders</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Amazon */}
-          <div className="relative group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl opacity-10 group-hover:opacity-20 blur transition duration-300"></div>
-            <div className="relative bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 rounded-2xl p-6">
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
-                <div>
-                  <h3 className="text-xl font-bold text-neutral-100">Amazon</h3>
-                  <p className="text-blue-400 font-medium">Amazon Web Services Analytics Intern</p>
-                </div>
-                <div className="text-neutral-400 md:text-right mt-2 md:mt-0">
-                  <p className="font-medium">Seattle, WA</p>
-                  <p className="text-sm">May 2022 – Aug 2022</p>
-                </div>
-              </div>
-              <ul className="space-y-2 text-neutral-400 text-sm list-disc list-inside">
-                <li>Utilized data analysis, statistics, and visualization by querying Amazon&apos;s internal SQL data warehouses</li>
-                <li>Created training metrics and cooperated with different stakeholders to create deliverables on QuickSight</li>
-                <li>Worked with Amazon Redshift and different ETL techniques to create a pipeline to analyze and visualize data</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Southwest Airlines */}
-          <div className="relative group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl opacity-10 group-hover:opacity-20 blur transition duration-300"></div>
-            <div className="relative bg-neutral-900/90 backdrop-blur-sm border border-neutral-800 rounded-2xl p-6">
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
-                <div>
-                  <h3 className="text-xl font-bold text-neutral-100">Southwest Airlines</h3>
-                  <p className="text-blue-400 font-medium">Fleet Strategy Analyst Intern</p>
-                </div>
-                <div className="text-neutral-400 md:text-right mt-2 md:mt-0">
-                  <p className="font-medium">Dallas, TX</p>
-                  <p className="text-sm">Jan 2022 – Apr 2022</p>
-                </div>
-              </div>
-              <ul className="space-y-2 text-neutral-400 text-sm list-disc list-inside">
-                <li>Utilized SQL, Excel, Alteryx and Tableau to query, combine data sources, analyze, and optimize data to improve Southwest&apos;s base and maintenance scheduling across all airports and maintenance stations</li>
-                <li>Published Large-scale data analysis projects that were important to the technical operations division</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6 text-neutral-100">Skills</h2>
         <div className="flex flex-wrap gap-3">
+          <Link
+            href="/resume"
+            className="px-5 py-2.5 rounded-lg bg-neutral-100 text-neutral-950 text-sm font-medium hover:bg-white transition-colors"
+          >
+            View resume
+          </Link>
+          <a
+            href="mailto:Roshenj76@gmail.com"
+            className="px-5 py-2.5 rounded-lg border border-neutral-700 text-sm text-neutral-200 hover:border-neutral-500 transition-colors"
+          >
+            Roshenj76@gmail.com
+          </a>
+          <a
+            href="https://www.linkedin.com/in/roshen-jegajeevan-a278a9205/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2.5 rounded-lg border border-neutral-700 text-sm text-neutral-200 hover:border-neutral-500 transition-colors"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-sm uppercase tracking-[0.18em] text-neutral-500 mb-4">
+          Experience
+        </h2>
+        <div className="space-y-4">
+          <Card>
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-5">
+              <div>
+                <h3 className="text-xl font-semibold text-neutral-50">Capital One</h3>
+                <p className="text-neutral-400">Auto Finance</p>
+              </div>
+              <p className="text-sm text-neutral-500">McLean, VA</p>
+            </div>
+            <div className="space-y-6">
+              <div>
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-1 mb-2">
+                  <p className="font-medium text-neutral-100">
+                    Senior Associate, Partnerships
+                  </p>
+                  <p className="text-sm text-neutral-500">Mar 2026 – Present</p>
+                </div>
+                <ul className="space-y-2 text-sm text-neutral-400 leading-relaxed list-disc pl-5">
+                  <li>
+                    Led a high-priority, multi-state credit policy expansion test
+                    for a strategic lending partner using Python, SQL, and Policy
+                    Engine to revise LTV, FE, BE, PTI, payment, and term counter
+                    limits, targeting 2.5–3x funded volume growth ahead of a
+                    national rollout projected to generate up to ~$100M in
+                    incremental NPV and ~$3B in originations.
+                  </li>
+                  <li>
+                    Coordinated the test release across sales, legal, product,
+                    operations, and technology, then led post-launch monitoring
+                    with executive leaders across applicant mix, approvals, funded
+                    volume, credit risk, and profitability.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-1 mb-2">
+                  <p className="font-medium text-neutral-100">
+                    Senior Associate, Prime Skew
+                  </p>
+                  <p className="text-sm text-neutral-500">Aug 2025 – Mar 2026</p>
+                </div>
+                <ul className="space-y-2 text-sm text-neutral-400 leading-relaxed list-disc pl-5">
+                  <li>
+                    Launched a differentiated credit decisioning strategy projected
+                    to increase NPV by ~$20M across Prime-Skew dealerships
+                    representing 12% of all dealers, by adjusting targets, approval
+                    limits, pricing, and counter limits.
+                  </li>
+                  <li>
+                    Productionized an XGBoost model using market and dealer-level
+                    attributes to identify rate-insensitive customer segments and
+                    apply risk-based pricing, accounting for ~$7M of the projected
+                    $20M NPV uplift.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-1 mb-2">
+                  <p className="font-medium text-neutral-100">
+                    Senior Associate, Dealer Management
+                  </p>
+                  <p className="text-sm text-neutral-500">Aug 2024 – Aug 2025</p>
+                </div>
+                <ul className="space-y-2 text-sm text-neutral-400 leading-relaxed list-disc pl-5">
+                  <li>
+                    Built an automated Auto Finance reporting suite using SQL, dbt,
+                    and Tableau, covering volume, losses, valuations, and risk
+                    metrics used in monthly portfolio strategy and credit policy
+                    decisions.
+                  </li>
+                  <li>
+                    Automated quarterly reporting with dbt, SQL, and Python,
+                    including Google Sheets and Slides updates, removing days of
+                    manual work each quarter.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-1 mb-2">
+                  <p className="font-medium text-neutral-100">
+                    Associate, Credit Card Innovation
+                  </p>
+                  <p className="text-sm text-neutral-500">Aug 2023 – Aug 2024</p>
+                </div>
+                <ul className="space-y-2 text-sm text-neutral-400 leading-relaxed list-disc pl-5">
+                  <li>
+                    Contributed to a production analytics repository in Python,
+                    SQL, and YAML that compared expected credit risk with actual
+                    portfolio performance, including model changes, bug fixes, and
+                    deployment.
+                  </li>
+                  <li>
+                    Presented model-driven insights that informed credit card
+                    policy decisions, with follow-up analysis in Python, SQL, and
+                    Excel.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Card>
+
+          <Card>
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
+              <div>
+                <h3 className="text-xl font-semibold text-neutral-50">
+                  Amazon, Southwest Airlines, Warner Bros. Discovery
+                </h3>
+                <p className="text-neutral-400">
+                  Business Analyst, Fleet Analyst, and Data Analyst internships
+                </p>
+              </div>
+              <div className="text-sm text-neutral-500 md:text-right">
+                <p>Atlanta, GA</p>
+                <p>Jan 2022 – Dec 2022</p>
+              </div>
+            </div>
+            <ul className="space-y-2 text-sm text-neutral-400 leading-relaxed list-disc pl-5">
+              <li>
+                Amazon: Built an automated training reporting suite with Redshift
+                and QuickSight to track completion, participation, and operational
+                performance.
+              </li>
+              <li>
+                Southwest Airlines: Analyzed fleet utilization, ticket pricing, and
+                fuel consumption with SQL, Python, and Snowflake to find
+                efficiency and route-profitability opportunities.
+              </li>
+              <li>
+                Warner Bros. Discovery: Built a SQL and Tableau suite for
+                newsletter open rates, click-through, subscriber growth,
+                engagement, and unsubscribes.
+              </li>
+            </ul>
+          </Card>
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-sm uppercase tracking-[0.18em] text-neutral-500 mb-4">
+          Education
+        </h2>
+        <div className="space-y-4">
+          <Card>
+            <div className="flex flex-col md:flex-row md:justify-between gap-2">
+              <div>
+                <h3 className="text-lg font-semibold text-neutral-50">
+                  Georgia Institute of Technology
+                </h3>
+                <p className="text-neutral-300">
+                  M.S. Computer Science, Machine Learning
+                </p>
+                <p className="text-sm text-neutral-500 mt-1">GPA 3.5 / 4.0</p>
+              </div>
+              <div className="text-sm text-neutral-500 md:text-right">
+                <p>Atlanta, GA</p>
+                <p>Dec 2026</p>
+              </div>
+            </div>
+          </Card>
+          <Card>
+            <div className="flex flex-col md:flex-row md:justify-between gap-2">
+              <div>
+                <h3 className="text-lg font-semibold text-neutral-50">
+                  Georgia Institute of Technology
+                </h3>
+                <p className="text-neutral-300">B.S. Industrial Engineering</p>
+                <p className="text-sm text-neutral-500 mt-1">GPA 3.7 / 4.0</p>
+              </div>
+              <div className="text-sm text-neutral-500 md:text-right">
+                <p>Atlanta, GA</p>
+                <p>May 2023</p>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-sm uppercase tracking-[0.18em] text-neutral-500 mb-4">
+          Skills
+        </h2>
+        <div className="flex flex-wrap gap-2">
           {skills.map((skill) => (
             <Badge key={skill}>{skill}</Badge>
           ))}

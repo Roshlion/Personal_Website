@@ -2,28 +2,24 @@ import Container from "./Container";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-neutral-800 bg-neutral-950 mt-20">
+    <footer className="border-t border-neutral-800 mt-20">
       <Container className="py-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-400">
-          <div className="flex flex-col md:flex-row items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-sm text-neutral-500">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
             <a
-              href="mailto:roshenj67@gmail.com"
-              className="hover:text-neutral-100 transition-colors"
+              href="mailto:Roshenj76@gmail.com"
+              className="hover:text-neutral-200 transition-colors"
             >
-              roshenj67@gmail.com
+              Roshenj76@gmail.com
             </a>
-            <span className="hidden md:inline">•</span>
             <a
               href="tel:+16784624887"
-              className="hover:text-neutral-100 transition-colors"
+              className="hover:text-neutral-200 transition-colors"
             >
               678-462-4887
             </a>
           </div>
-          <div className="text-center md:text-right">
-            <p>&copy; {new Date().getFullYear()} Roshen Jegajeevan</p>
-            <p className="text-xs mt-1">Deployed on Vercel</p>
-          </div>
+          <p>&copy; {new Date().getFullYear()} Roshen Jegajeevan</p>
         </div>
       </Container>
     </footer>

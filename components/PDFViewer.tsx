@@ -10,25 +10,21 @@ export default function PDFViewer({
   title = "Resume PDF",
 }: PDFViewerProps) {
   return (
-    <div className="pdf-container rounded-2xl overflow-hidden border border-neutral-800 shadow-lg">
+    <div className="pdf-container rounded-2xl overflow-hidden border border-neutral-800 bg-white">
       <object
         data={`${src}#view=FitH`}
         type="application/pdf"
         className="w-full h-full"
         aria-label={title}
       >
-        <div className="flex flex-col items-center justify-center h-full p-8 bg-neutral-900">
+        <div className="flex flex-col items-center justify-center h-full p-8 bg-neutral-950">
           <p className="text-neutral-300 mb-4 text-center">
-            Your browser does not support inline PDF viewing.
-          </p>
-          <p className="text-neutral-400 text-sm mb-6 text-center max-w-md">
-            On mobile, some browsers block PDF preview—use the Download button
-            if the viewer doesn&apos;t load.
+            This browser can&apos;t show the PDF inline.
           </p>
           <a
             href={src}
             download
-            className="px-6 py-3 bg-neutral-100 text-neutral-900 rounded-lg font-medium hover:bg-neutral-200 transition-colors"
+            className="px-5 py-2.5 bg-neutral-100 text-neutral-950 rounded-lg text-sm font-medium hover:bg-white transition-colors"
           >
             Download PDF
           </a>
