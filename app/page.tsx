@@ -3,22 +3,56 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import Badge from "@/components/Badge";
 
-const skills = [
-  "SQL",
-  "Python",
-  "Statistical Analysis",
-  "Predictive Modeling",
-  "Credit Risk Modeling",
-  "Tableau",
-  "Snowflake",
-  "dbt",
-  "Java",
-  "MATLAB",
-  "Machine Learning",
-  "Git",
-  "CAD",
-  "ETL",
-  "AWS Certified",
+const skillGroups = [
+  {
+    label: "Analytics",
+    items: [
+      "SQL",
+      "Python",
+      "Pandas",
+      "Seaborn",
+      "Scikit-learn",
+      "NumPy",
+      "Matplotlib",
+      "R",
+      "Java",
+      "MATLAB",
+      "VBA",
+      "Excel",
+      "Tableau",
+      "Power BI",
+      "Snowflake",
+      "dbt",
+      "AWS",
+      "Oracle",
+      "Redshift",
+      "Git",
+      "ETL",
+    ],
+  },
+  {
+    label: "Credit risk and data science",
+    items: [
+      "Credit Risk Modeling",
+      "Credit Policy Strategy",
+      "Risk-Based Pricing",
+      "Predictive Modeling",
+      "Machine Learning",
+    ],
+  },
+  {
+    label: "Strategy",
+    items: [
+      "Strategic Problem Solving",
+      "Cross-Functional Leadership",
+      "Project Management",
+      "Change Management",
+      "Executive Communication",
+      "Critical Thinking",
+      "Hypothesis-Driven Assessment",
+      "Human-Centered Design",
+    ],
+  },
 ];
 
 function Card({ children }: { children: ReactNode }) {
@@ -40,7 +74,7 @@ export default function Home() {
           Roshen Jegajeevan
         </h1>
         <p className="text-lg text-neutral-300 mb-6 max-w-2xl">
-          Senior Associate, Partnerships. M.S. Computer Science at Georgia Tech,
+          Business Manager, Partnerships. M.S. Computer Science at Georgia Tech,
           focused on machine learning.
         </p>
         <p className="text-neutral-400 leading-relaxed max-w-2xl mb-8">
@@ -89,24 +123,32 @@ export default function Home() {
               <div>
                 <div className="flex flex-col sm:flex-row sm:justify-between gap-1 mb-2">
                   <p className="font-medium text-neutral-100">
-                    Senior Associate, Partnerships
+                    Business Manager, Partnerships
                   </p>
                   <p className="text-sm text-neutral-500">Mar 2026 – Present</p>
                 </div>
                 <ul className="space-y-2 text-sm text-neutral-400 leading-relaxed list-disc pl-5">
                   <li>
-                    Led a high-priority, multi-state credit policy expansion test
+                    Led a high-impact, multi-state credit policy expansion test
                     for a strategic lending partner using Python, SQL, and Policy
                     Engine to revise LTV, FE, BE, PTI, payment, and term counter
-                    limits, targeting 2.5–3x funded volume growth ahead of a
-                    national rollout projected to generate up to ~$100M in
-                    incremental NPV and ~$3B in originations.
+                    limits as well as approval limits, targeting 2.5–3x funded
+                    volume growth ahead of a national rollout projected to
+                    generate up to ~$100M in incremental NPV and ~$3B in
+                    originations.
                   </li>
                   <li>
-                    Coordinated the test release across sales, legal, product,
-                    operations, and technology, then led post-launch monitoring
-                    with executive leaders across applicant mix, approvals, funded
-                    volume, credit risk, and profitability.
+                    Coordinated cross-functional test implementation and
+                    post-launch monitoring across sales, legal, product,
+                    operations, and technology, partnering with executive
+                    leadership on applicant mix, approval rates, funded volume,
+                    credit risk, and profitability to refine credit policy limits
+                    and inform the national rollout.
+                  </li>
+                  <li>
+                    Managed interns and new hires in the Partnerships portfolio,
+                    leading onboarding, technical guidance, responsibilities, and
+                    key analytical decisions.
                   </li>
                 </ul>
               </div>
@@ -119,16 +161,18 @@ export default function Home() {
                 </div>
                 <ul className="space-y-2 text-sm text-neutral-400 leading-relaxed list-disc pl-5">
                   <li>
-                    Launched a differentiated credit decisioning strategy projected
-                    to increase NPV by ~$20M across Prime-Skew dealerships
-                    representing 12% of all dealers, by adjusting targets, approval
-                    limits, pricing, and counter limits.
+                    Developed and launched a differentiated credit decisioning
+                    strategy projected to generate ~$20M in incremental NPV
+                    across Prime-Skew dealerships representing 8% of Capital
+                    One’s dealer network, optimizing approval targets, pricing,
+                    and counter limits for historically underpenetrated segments.
                   </li>
                   <li>
                     Productionized an XGBoost model using market and dealer-level
-                    attributes to identify rate-insensitive customer segments and
-                    apply risk-based pricing, accounting for ~$7M of the projected
-                    $20M NPV uplift.
+                    attributes not captured in existing approval and risk models
+                    to identify rate-insensitive customer segments and apply
+                    risk-based pricing, accounting for ~$7M of the projected $20M
+                    NPV uplift.
                   </li>
                 </ul>
               </div>
@@ -141,15 +185,16 @@ export default function Home() {
                 </div>
                 <ul className="space-y-2 text-sm text-neutral-400 leading-relaxed list-disc pl-5">
                   <li>
-                    Built an automated Auto Finance reporting suite using SQL, dbt,
-                    and Tableau, covering volume, losses, valuations, and risk
-                    metrics used in monthly portfolio strategy and credit policy
-                    decisions.
+                    Built an automated Auto Finance reporting suite using SQL,
+                    dbt, and Tableau to monitor portfolio volume, credit losses,
+                    valuations, and consumer, deal, and risk KPIs across key
+                    segmentations, used by executive leadership for credit policy
+                    and risk strategy decisions.
                   </li>
                   <li>
-                    Automated quarterly reporting with dbt, SQL, and Python,
-                    including Google Sheets and Slides updates, removing days of
-                    manual work each quarter.
+                    Automated quarterly reporting with SQL and Python, including
+                    KPI calculations, visualizations, and Google Sheets and
+                    Slides updates, removing days of manual work each quarter.
                   </li>
                 </ul>
               </div>
@@ -162,19 +207,48 @@ export default function Home() {
                 </div>
                 <ul className="space-y-2 text-sm text-neutral-400 leading-relaxed list-disc pl-5">
                   <li>
-                    Contributed to a production analytics repository in Python,
-                    SQL, and YAML that compared expected credit risk with actual
-                    portfolio performance, including model changes, bug fixes, and
+                    Enhanced a production credit risk analytics repository in
+                    Python, SQL, and YAML that generates time-series reports
+                    comparing expected credit risk with actual portfolio
+                    performance, including model changes, bug fixes, and
                     deployment.
                   </li>
                   <li>
-                    Presented model-driven insights that informed credit card
-                    policy decisions, with follow-up analysis in Python, SQL, and
-                    Excel.
+                    Presented model-driven credit risk insights that informed
+                    credit card policy decisions, with follow-up analysis in
+                    Python, SQL, and Excel.
                   </li>
                 </ul>
               </div>
             </div>
+          </Card>
+
+          <Card>
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
+              <div>
+                <h3 className="text-xl font-semibold text-neutral-50">
+                  EduTourism Inc.
+                </h3>
+                <p className="text-neutral-400">
+                  Full Stack Developer (Part-Time)
+                </p>
+              </div>
+              <div className="text-sm text-neutral-500 md:text-right">
+                <p>Atlanta, GA</p>
+                <p>Aug 2021 – Dec 2022</p>
+              </div>
+            </div>
+            <ul className="space-y-2 text-sm text-neutral-400 leading-relaxed list-disc pl-5">
+              <li>
+                Built front-end interfaces and back-end functionality for an
+                early-stage educational tourism platform, including database
+                management.
+              </li>
+              <li>
+                Developed and integrated backend APIs and services for user
+                authentication, data processing, and database operations.
+              </li>
+            </ul>
           </Card>
 
           <Card>
@@ -217,49 +291,44 @@ export default function Home() {
         <h2 className="text-sm uppercase tracking-[0.18em] text-neutral-500 mb-4">
           Education
         </h2>
-        <div className="space-y-4">
-          <Card>
-            <div className="flex flex-col md:flex-row md:justify-between gap-2">
-              <div>
-                <h3 className="text-lg font-semibold text-neutral-50">
-                  Georgia Institute of Technology
-                </h3>
-                <p className="text-neutral-300">
-                  M.S. Computer Science, Machine Learning
-                </p>
-                <p className="text-sm text-neutral-500 mt-1">GPA 3.5 / 4.0</p>
-              </div>
-              <div className="text-sm text-neutral-500 md:text-right">
-                <p>Atlanta, GA</p>
-                <p>Dec 2026</p>
-              </div>
+        <Card>
+          <div className="flex flex-col md:flex-row md:justify-between gap-2">
+            <div>
+              <h3 className="text-lg font-semibold text-neutral-50">
+                Georgia Institute of Technology
+              </h3>
+              <p className="text-neutral-300 mt-1">
+                M.S. Computer Science, Machine Learning
+              </p>
+              <p className="text-neutral-300">B.S. Industrial Engineering</p>
+              <p className="text-sm text-neutral-400 mt-3">
+                Summa Cum Laude. Top Capstone Project for 2023. Teaching
+                Assistant, Optimization.
+              </p>
+              <p className="text-sm text-neutral-500 mt-2 max-w-xl">
+                Coursework in machine learning, statistical modeling, probability
+                and statistics, optimization, and data structures and algorithms.
+              </p>
             </div>
-          </Card>
-          <Card>
-            <div className="flex flex-col md:flex-row md:justify-between gap-2">
-              <div>
-                <h3 className="text-lg font-semibold text-neutral-50">
-                  Georgia Institute of Technology
-                </h3>
-                <p className="text-neutral-300">B.S. Industrial Engineering</p>
-                <p className="text-sm text-neutral-500 mt-1">GPA 3.7 / 4.0</p>
-              </div>
-              <div className="text-sm text-neutral-500 md:text-right">
-                <p>Atlanta, GA</p>
-                <p>May 2023</p>
-              </div>
-            </div>
-          </Card>
-        </div>
+            <p className="text-sm text-neutral-500">Atlanta, GA</p>
+          </div>
+        </Card>
       </section>
 
       <section>
         <h2 className="text-sm uppercase tracking-[0.18em] text-neutral-500 mb-4">
           Skills
         </h2>
-        <div className="flex flex-wrap gap-2">
-          {skills.map((skill) => (
-            <Badge key={skill}>{skill}</Badge>
+        <div className="space-y-5">
+          {skillGroups.map((group) => (
+            <div key={group.label}>
+              <h3 className="text-sm text-neutral-400 mb-2">{group.label}</h3>
+              <div className="flex flex-wrap gap-2">
+                {group.items.map((skill) => (
+                  <Badge key={skill}>{skill}</Badge>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>

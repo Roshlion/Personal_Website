@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 const description =
-  "Roshen Jegajeevan is a Senior Associate in Auto Finance at Capital One and an M.S. Computer Science student at Georgia Tech.";
+  "Roshen Jegajeevan is a Business Manager in Auto Finance at Capital One and an M.S. Computer Science student at Georgia Tech.";
 
 export const metadata: Metadata = {
   title: "Roshen Jegajeevan",

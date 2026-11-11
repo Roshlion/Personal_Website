@@ -10,12 +10,12 @@ export default function Resume() {
             Resume
           </h1>
           <p className="text-neutral-500 mt-2 text-sm">
-            Updated October 2026
+            Updated November 2026
           </p>
         </div>
         <a
           href="/Roshen_J_Resume_Final.pdf"
-          download="Roshen_J_Resume.pdf"
+          download="Roshen_Resume_Final.pdf"
           className="px-5 py-2.5 bg-neutral-100 text-neutral-950 rounded-lg text-sm font-medium hover:bg-white transition-colors w-fit"
         >
           Download PDF

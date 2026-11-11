@@ -1,7 +1,7 @@
 # Roshen Jegajeevan — Portfolio
 
 
-Personal site for Roshen Jegajeevan, Senior Associate in Auto Finance at Capital One, with an M.S. in Computer Science (Machine Learning) in progress at Georgia Tech. The public site is a resume and a short background page.
+Personal site for Roshen Jegajeevan, Business Manager in Auto Finance at Capital One, with an M.S. in Computer Science (Machine Learning) in progress at Georgia Tech. The public site is a resume and a short background page.
 
 StratBench is kept in `components/archive/StratBenchSection.tsx` and is not linked from the site.
 
